@@ -13,13 +13,38 @@ function App() {
     })
   }, [])
   
+  // return (
+  //   <div className="App">
+  //     <ol>
+  //       {contacts.map(contact => 
+  //       <li>{contact.name} {contact.lastName} {contact.phoneNumber} Hello
+  //       </li>)}
+  //     </ol>
+  //   </div>
+  // )
   return (
     <div className="App">
-      <ol>
-        {contacts.map(contact => 
-        <li>{contact.name} {contact.lastName} {contact.phoneNumber} Hello
-        </li>)}
-      </ol>
+      <caption>People</caption>
+      {contacts.map(contact => 
+      <div>
+          <table class="horizontal">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="name">{contact.name}</td>
+              <td data-label="lastName">{contact.lastName}</td>
+              <td data-label="phoneNumber">{contact.phoneNumber}</td>
+            </tr>
+          </tbody>
+          </table>
+      </div>
+        )}
     </div>
   )
 }
