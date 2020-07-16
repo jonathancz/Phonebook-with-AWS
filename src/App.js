@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {getContacts} from './services/contacts'
 
@@ -12,16 +11,7 @@ function App() {
       setContacts(results)
     })
   }, [])
-  
-  // return (
-  //   <div className="App">
-  //     <ol>
-  //       {contacts.map(contact => 
-  //       <li>{contact.name} {contact.lastName} {contact.phoneNumber} Hello
-  //       </li>)}
-  //     </ol>
-  //   </div>
-  // )
+
   return (
     <div className="App">
       <caption>People</caption>
